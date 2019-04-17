@@ -1,0 +1,19 @@
+# Prompt user over and over again until they say 'bye'
+# but if they say 'bye' three times
+# just exit the program
+
+# Set our bye_count to zero, no one has said anything yet...
+
+bye_count = 0
+
+while bye_count < 3:
+    should_run = True
+
+    while should_run:
+        user_input = input('What? ')
+        print('%s' % user_input)
+        
+        if user_input == 'bye':
+            bye_count += 1
+            print('%s' % bye_count)
+            should_run = False
